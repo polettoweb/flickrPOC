@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="use of Flickr API - proof of concept" />
+    <meta name="keywords" content="Flickr, API, gallery, JavaScript" />
+    <meta name="author" content="Marco Poletto" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="apple-touch-icon"
@@ -82,6 +85,21 @@
     <header>
       <h1>Flickr API</h1>
     </header>
+    <div class="form__container">
+      <div class="form__group field">
+        <input
+          type="input"
+          class="form__field"
+          placeholder="Name"
+          name="search term"
+          autofocus
+        />
+        <label for="name" class="form__label">Name</label>
+      </div>
+      <button type="button" aria-label="Search" class="form__submit">
+        >
+      </button>
+    </div>
     <div id="app">
       <div class="page-loading__container">
         <div class="page-loading__content">

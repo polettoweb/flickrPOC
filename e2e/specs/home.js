@@ -1,6 +1,6 @@
 describe("Homepage", () => {
   it("Visits the app root and checking for correct rendering", () => {
-    cy.visit("http://localhost:8081");
+    cy.visit("http://localhost:8080");
     cy.expect("h1").to.exist;
     cy.get("h1").should("not.be.empty");
     // cy.wait(3000);
