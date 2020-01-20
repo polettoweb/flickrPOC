@@ -1,4 +1,4 @@
-export const prepareArray = (photos = [], target) => {
+export const prepareArray = (photos = [], target, page = 1) => {
   try {
     let array = [];
     if (photos.length > 0) {
@@ -15,7 +15,9 @@ export const prepareArray = (photos = [], target) => {
           url
         });
       });
-      target.innerHTML = "";
+      if (page == 1) {
+        target.innerHTML = "";
+      }
       if (array.length > 1) {
         array.forEach((el, i) => {
           const container = document.createElement("div");
