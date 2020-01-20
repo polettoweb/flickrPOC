@@ -1,7 +1,6 @@
 import fetchData from "./fetchData";
 import prepareArray from "./prepareArray";
 import createElements from "./createElements";
-// import generateLightBox from "./generateLightBox";
 import "../styles/index.scss";
 const target = document.getElementById("app");
 const button = document.querySelector("button");
