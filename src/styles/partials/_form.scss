@@ -70,10 +70,13 @@
   }
 
   &__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 10px;
     width: 62px;
     height: 62px;
-    font-size: 50px;
+    font-size: 30px;
     background-color: transparent;
     color: $gray;
     border-radius: 5px;

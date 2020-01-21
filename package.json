@@ -5,7 +5,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js  --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
-    "test": "jest",
+    "test": "jest src/scripts",
     "test:e2e": "cypress open"
   },
   "author": "Marco Poletto",

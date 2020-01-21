@@ -15,23 +15,28 @@ export const prepareArray = (photos = [], target, page = 1) => {
           url
         });
       });
+
       if (page == 1) {
+        //cleaning app only if it's the first call to the API for a given term.
+        //if page > 1 it keeps appening
         target.innerHTML = "";
       }
-      if (array.length > 1) {
-        array.forEach((el, i) => {
-          const container = document.createElement("div");
-          const loader = document.createElement("div");
 
-          container.setAttribute("class", `gallery__container image-${i}`);
-          container.setAttribute("ref", i);
-          loader.setAttribute("class", "image-loading");
+      array.forEach((el, i) => {
+        const container = document.createElement("div");
+        const loader = document.createElement("div");
 
-          container.appendChild(loader);
-          target.appendChild(container);
-        });
-      }
+        container.setAttribute(
+          "class",
+          `gallery__container image-${i + 1 + 12 * (page - 1)}`
+        );
+        loader.setAttribute("class", "image-loading");
+
+        container.appendChild(loader);
+        target.appendChild(container);
+      });
     } else {
+      //if no photos, clearing the loading screen and appending message
       target.innerHTML = "";
       const message = document.createElement("p");
 

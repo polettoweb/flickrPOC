@@ -20,13 +20,13 @@ npm start
 npm run build
 ```
 
-### Run functional test
+### Run functional test (Jest)
 
 ```
 npm run test
 ```
 
-### Build e2e test
+### Run e2e test (Cypress)
 
 ```
 npm run test:e2e
